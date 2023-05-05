@@ -3,7 +3,7 @@
 }
 
 .SignUp input {
-   display: inline-block;
+   display: block;
    margin: 5px 0 5px 0;
 }
 

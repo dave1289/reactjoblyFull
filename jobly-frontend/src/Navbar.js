@@ -26,6 +26,16 @@ const NavBar = () => {
                <NavLink to="/profile">Profile</NavLink>
             </NavItem>
             </Nav>
+            <Nav className="ml-5">
+            <NavItem>
+               <NavLink to="/signup">Sign Up</NavLink>
+            </NavItem>
+            </Nav>
+            <Nav className="ml-5">
+            <NavItem>
+               <NavLink to="/profile">Profile</NavLink>
+            </NavItem>
+            </Nav>
          </Navbar>
       </div>
    );
