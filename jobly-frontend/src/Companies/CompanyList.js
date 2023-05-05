@@ -11,12 +11,12 @@ const CompanyList = () => {
    const [data, setData] = useState("");
 
    useEffect(function getCompaniesOnMount() {
-      console.debug("CompanyList useEffect getCompaniesOnMount");
+      // console.debug("CompanyList useEffect getCompaniesOnMount");
       search();
    }, []);
 
    useEffect(function getCompaniesOnSearch(){
-      console.debug("searching companies")
+      // console.debug("searching companies")
       search(data.searchTerm)
       reset()
    }, [data])
@@ -36,7 +36,7 @@ const CompanyList = () => {
          <h1 className="display-5 text-center font-weight-bold">Companies</h1>
          <form id="CompanyList-Search" onSubmit={handleSubmit(data => setData(data))}>
             <input {...register("searchTerm")} placeholder="search term" className="mb-3 mt-2"></input>
-            <button className="btn btn-secondary">Search</button>
+            <button className="btn btn-secondary ml-4">Search</button>
          </form>
          <Company companyArray={companies} />
       </div>

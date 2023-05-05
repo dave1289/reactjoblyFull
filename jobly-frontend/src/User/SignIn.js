@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form"
 import { Placeholder } from "reactstrap";
 import "./SignIn.css"
 import { Card, CardBody, CardTitle } from "reactstrap";
 import JoblyApi from "../Api";
+import TokenContext from "./TokenContext";
 
 const SignIn = () => {
    const { register, handleSubmit, reset } = useForm();
    const [data, setData] = useState("");
+   const {token, setToken} = useContext(TokenContext)
 
-   const onSubmit = (data, e) => {
+   async function onSubmit(data, e) {
       e.preventDefault();
       // console.log('PASSED DATA', data)
-      JoblyApi.login(data)
+      const newToken = JoblyApi.login(data)
+      console.log('TOKEN TEST', newToken)
+      setToken(newToken)
    }
 
    return (

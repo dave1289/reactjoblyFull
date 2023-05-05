@@ -8,7 +8,7 @@ const Company = ({ companyArray }) => {
    return (
       <div>
          {companyArray.map(company =>
-            <Card onClick={() => alert('test')} className=".col .col-auto" key={`${company.handle}`} style={{cursor: "pointer"}}>
+            <Card onClick={() => alert(`You clicked the ${company.name} thing`)} className=".col .col-auto" key={`${company.handle}`} style={{cursor: "pointer"}}>
                <CardHeader>
                   <CardTitle>
                      <p>{company.name}</p>

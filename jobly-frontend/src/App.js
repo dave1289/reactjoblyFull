@@ -1,14 +1,19 @@
+import React, { createContext, useState } from "react";
 import './App.css';
 import './Api';
 import NavBar from './Navbar';
 import Router from './Routes';
+import TokenContext from "./User/TokenContext"
 
 function App() {
+   const [token, setToken] = useState('')
    return (
-      <div className="App">
-         <NavBar />
-         <Router />
-      </div>
+      <TokenContext.Provider value={{token, setToken}}>
+         <div className="App">
+            <NavBar />
+            <Router />
+         </div>
+      </TokenContext.Provider>
    );
 }
 
