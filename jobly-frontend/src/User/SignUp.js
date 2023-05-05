@@ -11,13 +11,12 @@ const SignUp = () => {
 
    const signUpUser = (data, evt) => {
       evt.preventDefault();
-      const userData = JSON.stringify(data)
-      console.log('PASSED DATA', userData)
-      JoblyApi.register(userData)
+      // console.log('PASSED DATA', data)
+      JoblyApi.register(data)
    }
    return (
       <div className="SignUp">
-         <Card className="col-sm-3 text-center" id="signupcard" style={{ width: '15rem' }}>
+         <Card className="col-sm-3 text-center" id="signupcard" style={{ width: '15rem'}}>
             <CardTitle className="display-5"> Sign Up </CardTitle>
             <CardBody>
                <form onSubmit={handleSubmit((data, e) => signUpUser(data, e))}>
