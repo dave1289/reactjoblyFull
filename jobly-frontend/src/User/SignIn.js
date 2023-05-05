@@ -10,8 +10,8 @@ const SignIn = () => {
 
    return (
       <div className="SignIn">
-         <Card className="col-md-4 text-center" style={{width: "15rem"}}>
-            <CardTitle> Sign In </CardTitle>
+         <Card className="text-center col-sm-3" style={{width: '15rem'}}>
+            <CardTitle className="display-5"> Sign In </CardTitle>
             <CardBody>
          <form onSubmit={handleSubmit}>
             <input {...register('username')} placeholder="username"></input>

@@ -21,19 +21,14 @@ const NavBar = () => {
                <NavLink to="/jobs">Jobs</NavLink>
             </NavItem>
             </Nav>
-            <Nav className="ml-5">
+            {/* <Nav className="ml-5">
             <NavItem>
                <NavLink to="/profile">Profile</NavLink>
             </NavItem>
-            </Nav>
+            </Nav> */}
             <Nav className="ml-5">
             <NavItem>
                <NavLink to="/signup">Sign Up</NavLink>
-            </NavItem>
-            </Nav>
-            <Nav className="ml-5">
-            <NavItem>
-               <NavLink to="/profile">Profile</NavLink>
             </NavItem>
             </Nav>
          </Navbar>
