@@ -9,7 +9,7 @@ const Job = ({ JobArray }) => {
    return (
       <div>
          {JobArray.map(job =>
-            <Card className=".col .col-auto" key={job.id}>
+            <Card className="col col-md-4" key={job.id}>
                <CardHeader>
                   <CardTitle>
                      <p>{job.title}</p>

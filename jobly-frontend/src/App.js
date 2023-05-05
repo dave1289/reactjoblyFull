@@ -7,6 +7,8 @@ import TokenContext from "./User/TokenContext"
 
 function App() {
    const [token, setToken] = useState('')
+   const [currUser, setCurrUser] = useState('')
+   
    return (
       <TokenContext.Provider value={{token, setToken}}>
          <div className="App">

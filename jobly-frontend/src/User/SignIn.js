@@ -14,10 +14,10 @@ const SignIn = () => {
    async function onSubmit(data, e) {
       e.preventDefault();
       // console.log('PASSED DATA', data)
-      const newToken = JoblyApi.login(data)
+      const newToken = await JoblyApi.login(data)
       console.log('TOKEN TEST', newToken)
       setToken(newToken)
-   }
+      }
 
    return (
       <div className="SignIn">
